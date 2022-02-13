@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Zen+Kurenaido&display=swap');
+.title{
+    background-color: #2F4050;
+    color: #fff;
+    font-size: pxtovw(25, 1360);
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 2px;
+    padding: pxtovw(16, 1360);
+    // スマホ
+    @media only screen and (max-width: 768px) { 
+        font-size: pxtovw(30, 768);
+        padding: pxtovw(16, 768);
+    }
+}
+
+.repository{
+    width: 100%;
+    border: 1px solid lightGray;
+    transition: .3s;
+    list-style: none;
+    border-radius: 10px;
+    padding: pxtovw(25, 1360) 0;
+    &:hover{
+        box-shadow: 0 0 8px gray;
+        transform: scale(1.01);
+    }
+    &-unit{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: pxtovw(16, 1360);
+        width: calc(100% - (16px * 2));
+        margin: pxtovw(16, 1360) auto;
+        @media only screen and (max-width: 768px) { 
+            grid-template-columns: repeat(1, 1fr);
+            gap: 8px;
+        }
+    }
+    &__block{
+        @media only screen and (max-width: 768px) { 
+            display: flex;
+            width: calc(100% - (8px * 2));
+            margin: 0 auto;
+        }
+    }
+    &__image{
+        width: calc(100% / 3.65);
+        margin: 0 auto;
+        @media only screen and (max-width: 768px) { 
+            width: calc(100% / 8);
+            margin: 0;
+        }
+    }
+    &__title{
+        text-align: center;
+        font-size: pxtovw(22, 1360);
+        font-weight: bold;
+        color: #676A6C;
+        margin: pxtovw(25, 1360) 0;
+        @media only screen and (max-width: 768px) { 
+            font-size: 3.5vw;
+            text-align: left;
+            margin: 0 0 0 pxtovw(16, 768);
+            width: 60%;
+            position:relative;
+            h2{
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    &__starBlock{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: pxtovw(110, 1360);
+        margin: 0 auto;
+        
+        @media only screen and (max-width: 768px) { 
+            position: relative;
+            width: pxtovw(150, 768);
+        }
+    }
+    &__star{
+        width: pxtovw(25, 1360);
+        @media only screen and (max-width: 768px) { 
+            width: 3.5vw;
+            position: absolute;
+            top: calc((100% - 10px) / 2);
+            transform : translateY(-50%);
+        }
+    }    
+    &__stargazers{
+        font-weight: normal;
+        margin: 0;
+        text-align: right;
+        font-size: pxtovw(20, 1360);
+        color: #676A6C;
+        padding: pxtovw(4, 1360) 0;
+        @media only screen and (max-width: 768px) { 
+            text-align: right;
+            font-size: 3.5vw;
+            position: absolute;
+            top: 50%;
+            transform : translateY(-50%);
+            right: pxtovw(8, 768);
+        }
+    }
+}
+

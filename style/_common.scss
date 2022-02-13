@@ -1,0 +1,14 @@
+img{
+    width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+}
+
+
+$viewport: 750; // 基準となるビューポート
+
+@function pxtovw($num, $width: $viewport) {
+   @return (1vw * $num / $width * 100);
+}
