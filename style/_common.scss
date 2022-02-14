@@ -6,8 +6,8 @@ a{
     text-decoration: none;
 }
 
-
-$viewport: 750; // 基準となるビューポート
+// 基準となるビューポート
+$viewport: 1360;
 
 @function pxtovw($num, $width: $viewport) {
    @return (1vw * $num / $width * 100);
